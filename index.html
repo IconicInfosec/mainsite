@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iconic Infosec Training - CyberSecurity Certification & Framework</title>
+    <style>
+        :root {
+            --ink: #172033;
+            --muted: #526071;
+            --blue: #0b5cab;
+            --pale: #eef5fb;
+            --line: #dbe3ec
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            background: #e9eef3;
+            color: var(--ink);
+            font: 15px/1.5 Arial, Helvetica, sans-serif
+        }
+
+        .header {
+            background: linear-gradient(135deg, #102a43, #0b5cab);
+            padding: 20px 0;
+            color: #fff;
+        }
+
+        .header-container {
+            max-width: 1050px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .nav-link.active {
+            font-weight: bold;
+        }
+
+        .main-content {
+            padding: 30px 20px;
+            max-width: 1050px;
+            margin: 0 auto;
+        }
+
+        .hero-section {
+            background: #fff;
+            padding: 50px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 8px 30px #17203320;
+        }
+
+        .hero-text h2 {
+            font-size: 36px;
+            color: var(--blue);
+            margin: 0 0 10px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: var(--muted);
+        }
+        
+        .features-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 8px 30px #17203320;
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 24px;
+            color: var(--blue);
+            margin: 0 0 10px;
+        }
+
+        .feature-card p {
+            color: var(--muted);
+        }
+
+        .feature-link {
+            color: var(--blue);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .bio-section {
+            background: #fff;
+            padding: 40px;
+            margin-top: 30px;
+            border-radius: 8px;
+            box-shadow: 0 8px 30px #17203320;
+        }
+
+        .bio-section h2 {
+            font-size: 28px;
+            color: var(--blue);
+            border-bottom: 2px solid var(--blue);
+            padding-bottom: 10px;
+            margin: 0 0 20px;
+        }
+        
+        .footer {
+            background: #102a43;
+            color: #fff;
+            padding: 40px 20px;
+            margin-top: 30px;
+        }
+        
+        .footer-container {
+            max-width: 1050px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .footer-section h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        
+        .footer-section p, .footer-section ul {
+            color: #dceeff;
+            font-size: 14px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-section li {
+            margin-bottom: 8px;
+        }
+        
+        .footer-section a {
+            color: #dceeff;
+            text-decoration: none;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--line);
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;" onkeydown="return false;">
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="https://f005.backblazeb2.com/file/CCNPLabPic/Logo.png" alt="Iconic Infosec Logo" class="logo">
+                <h1>Iconic Infosec Training</h1>
+            </div>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#courses" class="nav-link">Courses</a>
+                <a href="#bio" class="nav-link">About Me</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content" id="home">
+        <!-- HERO SECTION -->
+        <section class="hero-section">
+            <div class="hero-text">
+                <h2>Unlock Your Cybersecurity Potential</h2>
+                <p>Expert-led training in Cisco, ISC2, ISO 27001 and more. Start your certification journey today.</p>
+            </div>
+        </section>
+
+        <!-- FEATURES SECTION -->
+        <section class="features-section" id="courses">
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>Cisco Cybersecurity Essential</h3>
+                <p>Master the fundamentals of cybersecurity with hands-on training from a Cisco expert.</p>
+                <a href="https://ism.iconicinfosec.com" class="feature-link">Learn More →</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎓</div>
+                <h3>ISC2 CC</h3>
+                <p>Prepare for the Certified in Cybersecurity certification with our comprehensive course.</p>
+                <a href="https://ism.iconicinfosec.com" class="feature-link">Learn More →</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <h3>ISO 27001:2022</h3>
+                <p>Understand and implement the leading international standard for information security.</p>
+                <a href="https://ism.iconicinfosec.com" class="feature-link">Learn More →</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <h3>CCNP</h3>
+                <p>Advance your networking career with our expert-led CCNP training program.</p>
+                <a href="https://ccnp.iconicinfosec.com" class="feature-link">Learn More →</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🛡️</div>
+                <h3>CCNA - Security</h3>
+                <p>Build a strong foundation in network security with our CCNA Security course.</p>
+                <a href="#" class="feature-link">Learn More →</a>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h3>Networking Fundamentals for CyberSecurity</h3>
+                <p>Understand the essential networking concepts required for a career in cybersecurity.</p>
+                <a href="#" class="feature-link">Learn More →</a>
+            </div>
+        </section>
+
+        <!-- BIO SECTION -->
+        <section class="bio-section" id="bio">
+            <h2>About Your Instructor</h2>
+            <p><strong>Zayar Maung Maung</strong></p>
+            <p>With over 15 years of experience in IT security and network engineering, I bring a wealth of practical knowledge to my training. My expertise spans enterprise infrastructure, telecommunications, network architecture, and security operations. I have hands-on experience with cutting-edge technologies like Trend Micro Vision One XDR/EDR, Elastic SIEM, and the Fortinet security stack. I am passionate about translating complex technical concepts into practical skills and empowering the next generation of cybersecurity professionals.</p>
+        </section>
+        
+        <section class="bio-section" id="why-us">
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li><strong>Real-World Experience:</strong> Learn from an instructor with over a decade of hands-on experience in the field.</li>
+                <li><strong>Industry-Recognized Certifications:</strong> Our courses are designed to help you pass key industry certifications.</li>
+                <li><strong>Comprehensive Curriculum:</strong> We cover a wide range of topics to give you a holistic understanding of cybersecurity.</li>
+                <li><strong>Hands-On Labs:</strong> Gain practical experience with our hands-on labs and real-world scenarios.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Iconic Infosec</h4>
+                <p>Providing world-class CyberSecurity training resources and certification preparation materials for aspiring security professionals.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Learning Paths</h4>
+                <ul>
+                    <li><a href="https://ism.iconicinfosec.com">Cisco Cybersecurity Essential</a></li>
+                    <li><a href="https://ism.iconicinfosec.com">ISC2 CC</a></li>
+                    <li><a href="https://ism.iconicinfosec.com">ISO 27001:2022</a></li>
+                    <li><a href="https://ccnp.iconicinfosec.com">CCNP</a></li>
+                    <li><a href="#">CCNA - Security</a></li>
+                    <li><a href="#">Networking Fundamentals for CyberSecurity</a></li>
+                </ul>
+            </div>
+            <div class="footer-section" id="contact">
+                <h4>Get Started</h4>
+                <p>Ready to advance your cybersecurity career?</p>
+                <p>Choose a learning path above and start your journey today.</p>
+                <p style="margin-top: 1rem;">Email: training@iconicinfosec.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Iconic Infosec Training. Empowering Security Professionals Worldwide.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.onkeydown = function (e) {
+            if (e.keyCode == 123) {
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+                return false;
+            }
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+                return false;
+            }
+            if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
