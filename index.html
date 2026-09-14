@@ -1,27 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iconic Infosec Training - CyberSecurity Certification & Framework</title>
-    <meta name="description" content="Iconic Infosec provides cybersecurity training, certification guidance, and networking education for professionals and learners.">
+    <meta name="description" content="Iconic Infosec provides cybersecurity training, certification guidance, and networking education for professionals and learners. Learn from industry experts with 15+ years experience.">
+    <meta name="keywords" content="cybersecurity training, networking fundamentals, ISC2 CC, CCNP, CCNA, ISO 27001, Myanmar">
     <meta name="robots" content="index, follow">
+    <meta name="author" content="Iconic Infosec Training">
     <link rel="canonical" href="https://iconicinfosec.com/">
     <link rel="sitemap" type="application/xml" href="https://iconicinfosec.com/sitemap.xml">
     <link rel="icon" href="/logo/Logo.png" type="image/png">
+    
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Iconic Infosec Training - CyberSecurity Certification & Framework">
+    <meta property="og:description" content="Master cybersecurity and networking with expert-led training programs. Industry-recognized certifications with hands-on practical experience.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://iconicinfosec.com/">
+    <meta property="og:image" content="https://iconicinfosec.com/logo/Logo.png">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Iconic Infosec Training",
+      "url": "https://iconicinfosec.com",
+      "logo": "https://iconicinfosec.com/logo/Logo.png",
+      "description": "Cybersecurity training and certification guidance",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Yangon",
+        "addressCountry": "MM"
+      },
+      "telephone": "+95988221106",
+      "email": "iconicinfosec@gmail.com",
+      "sameAs": [
+        "https://linkedin.com/in/zayarmaungmaung"
+      ]
+    }
+    </script>
+
     <style>
         :root {
             --ink: #172033;
             --muted: #526071;
             --blue: #0b5cab;
+            --blue-dark: #082a47;
             --pale: #eef5fb;
             --line: #dbe3ec;
             --green: #10b981;
+            --green-dark: #059669;
             --orange: #f59e0b;
             --red: #ef4444;
+            --purple: #8b5cf6;
+            --cyan: #06b6d4;
         }
 
         * {
@@ -30,62 +68,75 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            background: #e9eef3;
+            background: #f0f3f8;
             color: var(--ink);
             font-family: 'Inter', Arial, Helvetica, sans-serif;
             font-size: 15px;
             line-height: 1.6;
+            letter-spacing: -0.3px;
         }
 
-        /* Header */
+        /* ============ HEADER ============ */
         .header {
-            background: linear-gradient(135deg, #102a43, #0b5cab);
-            padding: 15px 0;
+            background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
+            padding: 18px 0;
             color: #fff;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.12);
+            backdrop-filter: blur(10px);
         }
 
         .header-container {
-            max-width: 1200px;
+            max-width: 1320px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 20px;
+            padding: 0 30px;
         }
 
         .logo-section {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 16px;
         }
 
         .logo {
-            width: 50px;
-            height: 50px;
-            border-radius: 10px;
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
         }
 
         .logo-text h1 {
-            font-size: 22px;
+            font-size: 24px;
             font-weight: 700;
             margin: 0;
-            letter-spacing: -0.5px;
+            letter-spacing: -1px;
         }
 
         .logo-text span {
-            font-size: 12px;
-            color: #dceeff;
-            opacity: 0.9;
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.8);
+            display: block;
+            margin-top: 2px;
         }
 
         .nav-menu {
             display: flex;
-            gap: 8px;
+            gap: 10px;
         }
 
         .nav-link {
@@ -93,13 +144,31 @@
             text-decoration: none;
             font-size: 14px;
             font-weight: 500;
-            padding: 10px 18px;
+            padding: 12px 20px;
             border-radius: 8px;
             transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: #fff;
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 60%;
         }
 
         .nav-link:hover, .nav-link.active {
-            background: rgba(255,255,255,0.15);
+            background: rgba(255, 255, 255, 0.12);
         }
 
         .mobile-menu-btn {
@@ -111,11 +180,11 @@
             cursor: pointer;
         }
 
-        /* Hero Section */
+        /* ============ HERO SECTION ============ */
         .hero {
-            background: linear-gradient(135deg, #102a43 0%, #0b5cab 50%, #06b6d4 100%);
+            background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 50%, var(--cyan) 100%);
             color: #fff;
-            padding: 80px 20px;
+            padding: 100px 30px 80px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -128,40 +197,42 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
         }
 
         .hero h2 {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            line-height: 1.2;
+            font-size: 54px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            line-height: 1.15;
+            letter-spacing: -1.5px;
         }
 
         .hero p {
-            font-size: 20px;
-            opacity: 0.95;
-            margin-bottom: 35px;
-            color: #dceeff;
+            font-size: 22px;
+            opacity: 0.94;
+            margin-bottom: 40px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.5;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 15px;
+            gap: 18px;
             justify-content: center;
             flex-wrap: wrap;
         }
 
         .btn {
-            padding: 14px 32px;
-            border-radius: 10px;
+            padding: 16px 36px;
+            border-radius: 12px;
             font-size: 16px;
             font-weight: 600;
             text-decoration: none;
@@ -169,6 +240,8 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
+            border: none;
+            cursor: pointer;
         }
 
         .btn-primary {
@@ -177,113 +250,290 @@
         }
 
         .btn-primary:hover {
-            background: #059669;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+            background: var(--green-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(16, 185, 129, 0.35);
         }
 
         .btn-secondary {
-            background: rgba(255,255,255,0.15);
+            background: rgba(255, 255, 255, 0.18);
             color: #fff;
-            border: 2px solid rgba(255,255,255,0.3);
+            border: 2px solid rgba(255, 255, 255, 0.35);
         }
 
         .btn-secondary:hover {
-            background: rgba(255,255,255,0.25);
+            background: rgba(255, 255, 255, 0.28);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-3px);
         }
 
-        /* Stats Section */
+        /* ============ STATS SECTION ============ */
         .stats {
             background: #fff;
-            padding: 40px 20px;
-            margin-top: -40px;
+            padding: 50px 30px;
+            margin-top: -30px;
             position: relative;
             z-index: 2;
-            border-radius: 20px 20px 0 0;
+            border-radius: 24px 24px 0 0;
+            box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.05);
         }
 
         .stats-container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
         }
 
         .stat-item {
             text-align: center;
-            padding: 20px;
+            padding: 30px 20px;
+            transition: all 0.4s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-8px);
         }
 
         .stat-number {
-            font-size: 42px;
-            font-weight: 700;
+            font-size: 48px;
+            font-weight: 800;
             color: var(--blue);
             line-height: 1;
+            margin-bottom: 12px;
         }
 
         .stat-label {
             color: var(--muted);
-            font-size: 14px;
-            margin-top: 8px;
+            font-size: 15px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
         }
 
-        /* Main Content */
+        /* ============ MAIN CONTENT ============ */
         .main-content {
-            padding: 60px 20px;
-            max-width: 1200px;
+            padding: 80px 30px;
+            max-width: 1320px;
             margin: 0 auto;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 60px;
         }
 
         .section-header h2 {
-            font-size: 36px;
+            font-size: 42px;
             color: var(--ink);
-            margin-bottom: 15px;
+            margin-bottom: 18px;
+            font-weight: 800;
+            letter-spacing: -1px;
         }
 
         .section-header p {
+            font-size: 19px;
+            color: var(--muted);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* ============ LEARNING PATHWAY SECTION ============ */
+        .pathway-section {
+            background: #fff;
+            padding: 70px 30px;
+            margin-bottom: 80px;
+        }
+
+        .pathway-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .pathway-header h3 {
+            font-size: 38px;
+            color: var(--ink);
+            margin-bottom: 16px;
+            font-weight: 800;
+            letter-spacing: -0.8px;
+        }
+
+        .pathway-header p {
             font-size: 18px;
             color: var(--muted);
             max-width: 600px;
             margin: 0 auto;
         }
 
-        /* Training Cards */
+        .pathway-flow {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            justify-content: center;
+            gap: 0;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .pathway-item {
+            background: linear-gradient(135deg, #f8fafc 0%, #fff 100%);
+            padding: 45px 35px;
+            border-radius: 0;
+            border: 1px solid var(--line);
+            text-align: center;
+            position: relative;
+            transition: all 0.4s ease;
+            flex: 1;
+            min-width: 240px;
+            max-width: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .pathway-item:not(:last-of-type) {
+            border-right: none;
+        }
+
+        .pathway-item:hover {
+            background: linear-gradient(135deg, var(--pale) 0%, #fff 100%);
+            box-shadow: 0 12px 40px rgba(11, 92, 171, 0.18);
+            transform: translateY(-6px);
+            z-index: 2;
+        }
+
+        .pathway-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--blue) 0%, var(--cyan) 100%);
+            color: #fff;
+            border-radius: 50%;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 0 auto 25px;
+            box-shadow: 0 6px 20px rgba(11, 92, 171, 0.25);
+        }
+
+        .pathway-item h4 {
+            font-size: 20px;
+            color: var(--ink);
+            margin-bottom: 14px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .pathway-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--green) 0%, #059669 100%);
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 12px;
+            font-weight: 700;
+            margin: 12px auto 20px;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+            letter-spacing: 0.4px;
+        }
+
+        .pathway-item p {
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .pathway-item .pathway-hours {
+            font-size: 14px;
+            color: var(--blue);
+            font-weight: 700;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid var(--line);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .pathway-arrow {
+            display: none;
+        }
+
+        @media (max-width: 1200px) {
+            .pathway-item {
+                max-width: 350px;
+                min-width: 200px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .pathway-flow {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .pathway-item {
+                border-radius: 16px;
+                border: 2px solid var(--line);
+                max-width: none;
+                margin-bottom: 0;
+            }
+
+            .pathway-item:not(:last-of-type) {
+                border-right: 2px solid var(--line);
+                border-bottom: 2px solid var(--line);
+            }
+
+            .pathway-header h3 {
+                font-size: 32px;
+            }
+
+            .pathway-section {
+                padding: 50px 20px;
+            }
+        }
+
+        /* ============ COURSE CARDS ============ */
         .courses-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 30px;
         }
 
         .course-card {
             background: #fff;
-            border-radius: 16px;
+            border-radius: 18px;
             overflow: hidden;
-            box-shadow: 0 8px 30px rgba(23, 32, 51, 0.08);
-            transition: all 0.4s ease;
+            box-shadow: 0 8px 32px rgba(23, 32, 51, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         .course-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-10px);
             box-shadow: 0 20px 50px rgba(23, 32, 51, 0.15);
         }
 
         .course-badge {
             position: absolute;
-            top: 15px;
-            right: 15px;
+            top: 18px;
+            right: 18px;
             background: var(--blue);
             color: #fff;
-            padding: 5px 12px;
+            padding: 7px 14px;
             border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
+            font-size: 11px;
+            font-weight: 700;
+            z-index: 10;
+            box-shadow: 0 4px 12px rgba(11, 92, 171, 0.3);
         }
 
         .course-badge.cisco {
@@ -302,76 +552,100 @@
             background: #8b5cf6;
         }
 
+        .course-badge.foundation {
+            background: #06b6d4;
+        }
+
+        .course-badge.popular {
+            background: #ef4444;
+        }
+
         .course-header {
-            padding: 30px 25px 20px;
+            padding: 35px 30px 25px;
             text-align: center;
             border-bottom: 1px solid var(--line);
+            background: linear-gradient(135deg, rgba(11, 92, 171, 0.02) 0%, rgba(6, 182, 212, 0.02) 100%);
         }
 
         .course-icon {
             font-size: 56px;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
+            line-height: 1;
         }
 
         .course-card h3 {
             font-size: 20px;
             color: var(--ink);
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            font-weight: 700;
+            line-height: 1.3;
         }
 
         .course-body {
-            padding: 25px;
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .course-card p {
             color: var(--muted);
             font-size: 14px;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
+            flex-grow: 1;
+            line-height: 1.7;
         }
 
         .course-meta {
             display: flex;
-            gap: 15px;
-            margin-bottom: 20px;
+            gap: 12px;
+            margin-bottom: 24px;
             flex-wrap: wrap;
         }
 
         .course-meta span {
             font-size: 12px;
-            color: var(--muted);
+            color: var(--blue);
             background: var(--pale);
-            padding: 4px 10px;
-            border-radius: 6px;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-weight: 500;
         }
 
         .course-link {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: var(--blue);
+            color: #fff;
             text-decoration: none;
             font-weight: 600;
             font-size: 14px;
-            transition: gap 0.3s ease;
+            transition: all 0.3s ease;
+            background: var(--blue);
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-top: auto;
         }
 
         .course-link:hover {
             gap: 12px;
+            background: var(--blue-dark);
+            transform: translateX(2px);
         }
 
-        /* About Section */
+        /* ============ ABOUT SECTION ============ */
         .about-section {
             background: #fff;
-            border-radius: 20px;
-            padding: 60px;
-            margin-top: 60px;
-            box-shadow: 0 8px 30px rgba(23, 32, 51, 0.08);
+            border-radius: 22px;
+            padding: 70px;
+            margin-top: 80px;
+            box-shadow: 0 8px 32px rgba(23, 32, 51, 0.08);
         }
 
         .about-grid {
             display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 50px;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 60px;
             align-items: center;
         }
 
@@ -380,35 +654,44 @@
         }
 
         .about-image .avatar {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--blue), #06b6d4);
+            width: 220px;
+            height: 220px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, var(--blue) 0%, var(--cyan) 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 72px;
-            margin: 0 auto 20px;
-            box-shadow: 0 15px 40px rgba(11, 92, 171, 0.3);
+            font-size: 80px;
+            margin: 0 auto 25px;
+            box-shadow: 0 20px 50px rgba(11, 92, 171, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .about-image:hover .avatar {
+            transform: translateY(-8px);
         }
 
         .about-image h3 {
-            font-size: 24px;
+            font-size: 26px;
             color: var(--ink);
-            margin-bottom: 5px;
+            margin-bottom: 8px;
+            font-weight: 700;
         }
 
         .about-image p {
             color: var(--blue);
-            font-weight: 500;
+            font-weight: 600;
+            font-size: 14px;
         }
 
         .about-content h2 {
-            font-size: 32px;
+            font-size: 36px;
             color: var(--ink);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             position: relative;
-            padding-bottom: 15px;
+            padding-bottom: 18px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
         }
 
         .about-content h2::after {
@@ -416,117 +699,205 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 60px;
-            height: 4px;
-            background: var(--blue);
-            border-radius: 2px;
+            width: 70px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--blue) 0%, var(--cyan) 100%);
+            border-radius: 3px;
         }
 
         .about-content p {
             color: var(--muted);
-            margin-bottom: 15px;
+            margin-bottom: 18px;
+            line-height: 1.8;
+            font-size: 15px;
         }
 
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-top: 25px;
+            gap: 18px;
+            margin-top: 30px;
         }
 
         .skill-item {
-            background: var(--pale);
-            padding: 15px;
-            border-radius: 10px;
-            border-left: 4px solid var(--blue);
+            background: linear-gradient(135deg, var(--pale) 0%, rgba(6, 182, 212, 0.05) 100%);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 5px solid var(--blue);
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateX(8px);
+            box-shadow: 0 8px 20px rgba(11, 92, 171, 0.12);
         }
 
         .skill-item h4 {
-            font-size: 14px;
+            font-size: 15px;
             color: var(--ink);
-            margin-bottom: 5px;
+            margin-bottom: 6px;
+            font-weight: 700;
         }
 
         .skill-item p {
-            font-size: 12px;
+            font-size: 13px;
             margin: 0;
+            color: var(--muted);
         }
 
-        /* Why Choose Us */
+        /* ============ CERTIFICATIONS SECTION ============ */
+        .certifications-section {
+            background: linear-gradient(135deg, #102a43 0%, var(--blue) 100%);
+            color: #fff;
+            padding: 70px 40px;
+            border-radius: 20px;
+            margin: 80px 0;
+        }
+
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .cert-item {
+            background: rgba(255, 255, 255, 0.12);
+            padding: 25px;
+            border-radius: 14px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .cert-item:hover {
+            background: rgba(255, 255, 255, 0.18);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .cert-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+        .cert-item p {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* ============ WHY CHOOSE US ============ */
         .why-us {
-            margin-top: 60px;
+            margin-top: 80px;
         }
 
         .why-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            gap: 30px;
         }
 
         .why-card {
-            background: linear-gradient(135deg, #102a43, #0b5cab);
+            background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
             color: #fff;
-            padding: 35px;
-            border-radius: 16px;
+            padding: 40px;
+            border-radius: 18px;
             text-align: center;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
+            transition: all 0.3s ease;
         }
 
         .why-card:hover {
-            transform: scale(1.03);
+            transform: scale(1.04);
+            box-shadow: 0 20px 50px rgba(11, 92, 171, 0.3);
+        }
+
+        .why-card:hover::before {
+            top: -30%;
+            right: -30%;
         }
 
         .why-icon {
-            font-size: 50px;
+            font-size: 52px;
             margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
         }
 
         .why-card h3 {
-            font-size: 20px;
-            margin-bottom: 12px;
+            font-size: 21px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
         }
 
         .why-card p {
-            opacity: 0.9;
-            font-size: 14px;
+            opacity: 0.92;
+            font-size: 15px;
+            position: relative;
+            z-index: 1;
+            line-height: 1.6;
         }
 
-        /* Technologies */
+        /* ============ TECHNOLOGIES SECTION ============ */
         .tech-section {
-            margin-top: 60px;
+            margin-top: 80px;
             background: #fff;
             border-radius: 20px;
-            padding: 60px;
-            box-shadow: 0 8px 30px rgba(23, 32, 51, 0.08);
+            padding: 70px 40px;
+            box-shadow: 0 8px 32px rgba(23, 32, 51, 0.08);
         }
 
         .tech-grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
-            margin-top: 30px;
+            gap: 18px;
+            margin-top: 40px;
         }
 
         .tech-item {
-            background: var(--pale);
-            padding: 15px 25px;
-            border-radius: 10px;
-            font-weight: 500;
+            background: linear-gradient(135deg, var(--pale) 0%, rgba(6, 182, 212, 0.05) 100%);
+            padding: 16px 28px;
+            border-radius: 12px;
+            font-weight: 600;
             color: var(--ink);
             display: flex;
             align-items: center;
             gap: 10px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--line);
         }
 
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, #10b981, #059669);
+        .tech-item:hover {
+            background: linear-gradient(135deg, var(--blue), var(--cyan));
             color: #fff;
-            padding: 80px 20px;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(11, 92, 171, 0.2);
+        }
+
+        /* ============ CTA SECTION ============ */
+        .cta-section {
+            background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
+            color: #fff;
+            padding: 90px 40px;
             text-align: center;
-            margin-top: 60px;
-            border-radius: 20px;
+            margin-top: 80px;
+            border-radius: 22px;
             position: relative;
             overflow: hidden;
         }
@@ -538,46 +909,52 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 60%);
         }
 
         .cta-content {
             position: relative;
             z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .cta-section h2 {
-            font-size: 36px;
-            margin-bottom: 15px;
+            font-size: 42px;
+            margin-bottom: 18px;
+            font-weight: 800;
+            letter-spacing: -1px;
         }
 
         .cta-section p {
-            font-size: 18px;
-            margin-bottom: 30px;
+            font-size: 20px;
+            margin-bottom: 35px;
             opacity: 0.95;
+            line-height: 1.6;
         }
 
-        /* Footer */
+        /* ============ FOOTER ============ */
         .footer {
-            background: #102a43;
+            background: linear-gradient(135deg, var(--blue-dark) 0%, #0a1f35 100%);
             color: #fff;
-            padding: 60px 20px 30px;
-            margin-top: 60px;
+            padding: 70px 30px 35px;
+            margin-top: 80px;
         }
 
         .footer-container {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 50px;
         }
 
         .footer-section h4 {
             font-size: 18px;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             position: relative;
-            padding-bottom: 10px;
+            padding-bottom: 12px;
+            font-weight: 700;
         }
 
         .footer-section h4::after {
@@ -585,15 +962,16 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 40px;
-            height: 3px;
-            background: var(--blue);
+            width: 50px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--green) 0%, var(--cyan) 100%);
             border-radius: 2px;
         }
 
         .footer-section p, .footer-section ul {
-            color: #94a3b8;
+            color: rgba(255, 255, 255, 0.75);
             font-size: 14px;
+            line-height: 1.8;
         }
 
         .footer-section ul {
@@ -601,13 +979,14 @@
         }
 
         .footer-section li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .footer-section a {
-            color: #94a3b8;
+            color: rgba(255, 255, 255, 0.75);
             text-decoration: none;
             transition: color 0.3s ease;
+            font-weight: 500;
         }
 
         .footer-section a:hover {
@@ -616,15 +995,15 @@
 
         .social-links {
             display: flex;
-            gap: 12px;
-            margin-top: 20px;
+            gap: 14px;
+            margin-top: 22px;
         }
 
         .social-link {
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 10px;
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -632,23 +1011,25 @@
             text-decoration: none;
             font-size: 18px;
             transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .social-link:hover {
-            background: var(--blue);
-            transform: translateY(-3px);
+            background: var(--green);
+            border-color: var(--green);
+            transform: translateY(-4px);
         }
 
         .footer-bottom {
             text-align: center;
-            margin-top: 40px;
-            padding-top: 25px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            color: #64748b;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
             font-size: 13px;
         }
 
-        /* Responsive */
+        /* ============ RESPONSIVE ============ */
         @media (max-width: 768px) {
             .nav-menu {
                 display: none;
@@ -659,23 +1040,29 @@
             }
 
             .hero h2 {
-                font-size: 32px;
+                font-size: 38px;
             }
 
             .hero p {
-                font-size: 16px;
+                font-size: 18px;
+            }
+
+            .hero {
+                padding: 70px 20px 60px;
             }
 
             .stats-container {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
             }
 
             .about-grid {
                 grid-template-columns: 1fr;
+                gap: 40px;
             }
 
             .about-section, .tech-section {
-                padding: 40px 25px;
+                padding: 50px 25px;
             }
 
             .skills-grid {
@@ -683,11 +1070,61 @@
             }
 
             .section-header h2 {
-                font-size: 28px;
+                font-size: 32px;
+            }
+
+            .pathway-flow {
+                grid-template-columns: 1fr;
+            }
+
+            .pathway-arrow {
+                writing-mode: vertical-rl;
+                transform: rotate(180deg);
+            }
+
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header-container {
+                padding: 0 20px;
+            }
+
+            .certifications-section,
+            .cta-section {
+                padding: 50px 25px;
+            }
+
+            .footer-container {
+                gap: 30px;
             }
         }
 
-        /* Animations */
+        @media (max-width: 480px) {
+            .hero h2 {
+                font-size: 28px;
+            }
+
+            .section-header h2 {
+                font-size: 26px;
+            }
+
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons,
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* ============ ANIMATIONS ============ */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -699,17 +1136,32 @@
             }
         }
 
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
         .animate {
             animation: fadeInUp 0.6s ease forwards;
         }
+
+        .animate-left {
+            animation: slideInLeft 0.6s ease forwards;
+        }
     </style>
 </head>
-<body oncontextmenu="return false;" onkeydown="return false;">
+<body>
     <!-- HEADER -->
     <header class="header">
         <div class="header-container">
             <div class="logo-section">
-                <img src="/logo/Logo.png" alt="Iconic Infosec Logo" class="logo">
+                <img src="logo/Logo.png" alt="Iconic Infosec Logo" class="logo">
                 <div class="logo-text">
                     <h1>Iconic Infosec</h1>
                     <span>Training & Consulting</span>
@@ -717,6 +1169,7 @@
             </div>
             <nav class="nav-menu">
                 <a href="#home" class="nav-link active">Home</a>
+                <a href="#pathways" class="nav-link">Learning Path</a>
                 <a href="#courses" class="nav-link">Courses</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#why-us" class="nav-link">Why Us</a>
@@ -732,7 +1185,7 @@
             <h2>Master CyberSecurity & Networking</h2>
             <p>Expert-led training programs designed to elevate your career in IT Security. Industry-recognized certifications with hands-on practical experience.</p>
             <div class="hero-buttons">
-                <a href="#courses" class="btn btn-primary">Explore Courses →</a>
+                <a href="#pathways" class="btn btn-primary">Start Learning Path →</a>
                 <a href="#contact" class="btn btn-secondary">Contact Us</a>
             </div>
         </div>
@@ -762,6 +1215,50 @@
 
     <!-- MAIN CONTENT -->
     <main class="main-content">
+        <!-- LEARNING PATHWAY SECTION -->
+        <section id="pathways">
+            <div class="pathway-section">
+                <div class="pathway-header">
+                    <h3>Your Cybersecurity Learning Journey</h3>
+                    <p>Progressive pathway from networking fundamentals to advanced security certifications</p>
+                </div>
+                
+                <div class="pathway-flow">
+                    <div class="pathway-item">
+                        <div class="pathway-number">1</div>
+                        <h4>Networking Fundamentals</h4>
+                        <span class="pathway-badge">🌐 FOUNDATION</span>
+                        <p>Start here! Master TCP/IP, OSI Model, routing, and essential networking concepts required for cybersecurity success.</p>
+                        <div class="pathway-hours">⏱️ 30 Hours</div>
+                    </div>
+                    
+                    <div class="pathway-item">
+                        <div class="pathway-number">2</div>
+                        <h4>Cybersecurity Essentials</h4>
+                        <span class="pathway-badge">🔒 CORE</span>
+                        <p>Build solid foundations with comprehensive cybersecurity concepts, threat detection, and defense strategies.</p>
+                        <div class="pathway-hours">⏱️ 40 Hours</div>
+                    </div>
+                    
+                    <div class="pathway-item">
+                        <div class="pathway-number">3</div>
+                        <h4>ISC² CC Certification</h4>
+                        <span class="pathway-badge">🎓 PROFESSIONAL</span>
+                        <p>Achieve globally recognized certification. Master security domains, compliance, and best practices.</p>
+                        <div class="pathway-hours">⏱️ 35 Hours</div>
+                    </div>
+                    
+                    <div class="pathway-item">
+                        <div class="pathway-number">4</div>
+                        <h4>Advanced Specialization</h4>
+                        <span class="pathway-badge">🚀 EXPERT</span>
+                        <p>Choose your specialty: Network Security, Governance & Risk, or Enterprise Networking.</p>
+                        <div class="pathway-hours">⏱️ 45-80 Hours</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- COURSES SECTION -->
         <section id="courses">
             <div class="section-header">
@@ -770,6 +1267,24 @@
             </div>
 
             <div class="courses-grid">
+                <!-- Networking Fundamentals -->
+                <div class="course-card">
+                    <span class="course-badge foundation">🌐 Start Here</span>
+                    <div class="course-header">
+                        <div class="course-icon">🌐</div>
+                        <h3>Networking Fundamentals for CyberSecurity</h3>
+                    </div>
+                    <div class="course-body">
+                        <p>Master the essential networking concepts required for a successful career in cybersecurity. TCP/IP, OSI model, routing, switching, and security protocols.</p>
+                        <div class="course-meta">
+                            <span>⏱️ 30 Hours</span>
+                            <span>👤 Beginner</span>
+                            <span>📍 Foundation</span>
+                        </div>
+                        <a href="https://ism.iconicinfosec.com" class="course-link">Learn Now →</a>
+                    </div>
+                </div>
+
                 <!-- Cisco Cybersecurity Essential -->
                 <div class="course-card">
                     <span class="course-badge cisco">Cisco</span>
@@ -780,8 +1295,9 @@
                     <div class="course-body">
                         <p>Master the fundamentals of cybersecurity with comprehensive hands-on training. Learn threat detection, security controls, and defense strategies from a Cisco-certified expert.</p>
                         <div class="course-meta">
-                            <span>⏱️ Duration: 40 Hours</span>
-                            <span>📊 Intermediate</span>
+                            <span>⏱️ 40 Hours</span>
+                            <span>👤 Intermediate</span>
+                            <span>📊 Popular</span>
                         </div>
                         <a href="https://ism.iconicinfosec.com" class="course-link">Learn Now →</a>
                     </div>
@@ -795,46 +1311,13 @@
                         <h3>ISC² Certified in Cybersecurity (CC)</h3>
                     </div>
                     <div class="course-body">
-                        <p>Prepare for the globally recognized ISC² Certified in Cybersecurity certification. Comprehensive coverage of security concepts, domains, and exam preparation strategies.</p>
+                        <p>Prepare for the globally recognized ISC² CC certification. Comprehensive coverage of security concepts, domains, and exam preparation strategies.</p>
                         <div class="course-meta">
-                            <span>⏱️ Duration: 35 Hours</span>
-                            <span>📊 Beginner-Friendly</span>
+                            <span>⏱️ 35 Hours</span>
+                            <span>👤 Professional</span>
+                            <span>🌍 Global</span>
                         </div>
                         <a href="https://ism.iconicinfosec.com" class="course-link">Learn Now →</a>
-                    </div>
-                </div>
-
-                <!-- ISO 27001:2022 -->
-                <div class="course-card">
-                    <span class="course-badge iso">ISO</span>
-                    <div class="course-header">
-                        <div class="course-icon">📋</div>
-                        <h3>ISO/IEC 27001:2022</h3>
-                    </div>
-                    <div class="course-body">
-                        <p>Understand and implement the leading international standard for information security management systems. Learn risk assessment, controls implementation, and audit preparation.</p>
-                        <div class="course-meta">
-                            <span>⏱️ Duration: 45 Hours</span>
-                            <span>📊 All Levels</span>
-                        </div>
-                        <a href="https://ism.iconicinfosec.com" class="course-link">Learn Now →</a>
-                    </div>
-                </div>
-
-                <!-- CCNP -->
-                <div class="course-card">
-                    <span class="course-badge ccnp">Cisco</span>
-                    <div class="course-header">
-                        <div class="course-icon">🚀</div>
-                        <h3>CCNP Enterprise</h3>
-                    </div>
-                    <div class="course-body">
-                        <p>Advance your networking career with expert-led CCNP Enterprise training. Master routing, switching, and advanced network technologies with hands-on lab practice.</p>
-                        <div class="course-meta">
-                            <span>⏱️ Duration: 80 Hours</span>
-                            <span>📊 Advanced</span>
-                        </div>
-                        <a href="https://ccnp.iconicinfosec.com" class="course-link">Learn Now →</a>
                     </div>
                 </div>
 
@@ -848,31 +1331,53 @@
                     <div class="course-body">
                         <p>Build a strong foundation in network security. Learn secure network architecture, cryptography, AAA, firewall technologies, and VPN implementation.</p>
                         <div class="course-meta">
-                            <span>⏱️ Duration: 50 Hours</span>
-                            <span>📊 Intermediate</span>
+                            <span>⏱️ 50 Hours</span>
+                            <span>👤 Intermediate</span>
+                            <span>🔐 Network Security</span>
                         </div>
                         <a href="https://ism.iconicinfosec.com" class="course-link">Learn Now →</a>
                     </div>
                 </div>
 
-                <!-- Networking Fundamentals -->
+                <!-- CCNP Enterprise -->
                 <div class="course-card">
-                    <span class="course-badge">🌐</span>
+                    <span class="course-badge ccnp">CCNP</span>
                     <div class="course-header">
-                        <div class="course-icon">🌐</div>
-                        <h3>Networking Fundamentals for CyberSecurity</h3>
+                        <div class="course-icon">🚀</div>
+                        <h3>CCNP Enterprise</h3>
                     </div>
                     <div class="course-body">
-                        <p>Master the essential networking concepts required for a successful career in cybersecurity. TCP/IP, OSI model, routing, switching, and security protocols.</p>
+                        <p>Advance your networking career with expert-led CCNP Enterprise training. Master routing, switching, and advanced network technologies with hands-on lab practice.</p>
                         <div class="course-meta">
-                            <span>⏱️ Duration: 30 Hours</span>
-                            <span>📊 Beginner</span>
+                            <span>⏱️ 80 Hours</span>
+                            <span>👤 Advanced</span>
+                            <span>🌐 Enterprise</span>
+                        </div>
+                        <a href="https://ccnp.iconicinfosec.com" class="course-link">Learn Now →</a>
+                    </div>
+                </div>
+
+                <!-- ISO 27001:2022 -->
+                <div class="course-card">
+                    <span class="course-badge iso">ISO</span>
+                    <div class="course-header">
+                        <div class="course-icon">📋</div>
+                        <h3>ISO/IEC 27001:2022</h3>
+                    </div>
+                    <div class="course-body">
+                        <p>Master the international standard for information security management systems. Learn risk assessment, controls implementation, audit preparation, and compliance strategies.</p>
+                        <div class="course-meta">
+                            <span>⏱️ 45 Hours</span>
+                            <span>👤 All Levels</span>
+                            <span>📊 Governance</span>
                         </div>
                         <a href="https://ism.iconicinfosec.com" class="course-link">Learn Now →</a>
                     </div>
                 </div>
             </div>
         </section>
+
+        
 
         <!-- ABOUT SECTION -->
         <section class="about-section" id="about">
@@ -976,28 +1481,28 @@
                 <h4>About Iconic Infosec</h4>
                 <p>Providing world-class CyberSecurity training resources and certification preparation materials for aspiring security professionals in Myanmar and beyond.</p>
                 <div class="social-links">
-                    <a href="#" class="social-link">in</a>
-                    <a href="#" class="social-link">f</a>
-                    <a href="#" class="social-link">t</a>
+                    <a href="https://linkedin.com/in/zayarmaungmaung" class="social-link" title="LinkedIn">in</a>
+                    <a href="#" class="social-link" title="Facebook">f</a>
+                    <a href="#" class="social-link" title="Twitter">t</a>
                 </div>
             </div>
             <div class="footer-section">
                 <h4>Training Programs</h4>
                 <ul>
+                    <li><a href="https://ism.iconicinfosec.com">Networking Fundamentals</a></li>
                     <li><a href="https://ism.iconicinfosec.com">Cisco Cybersecurity Essential</a></li>
                     <li><a href="https://ism.iconicinfosec.com">ISC² Certified in Cybersecurity</a></li>
-                    <li><a href="https://ism.iconicinfosec.com">ISO/IEC 27001:2022</a></li>
-                    <li><a href="https://ccnp.iconicinfosec.com">CCNP Enterprise</a></li>
                     <li><a href="https://ism.iconicinfosec.com">CCNA Security</a></li>
-                    <li><a href="https://ism.iconicinfosec.com">Networking Fundamentals for CyberSecurity</a></li>
+                    <li><a href="https://ccnp.iconicinfosec.com">CCNP Enterprise</a></li>
+                    <li><a href="https://ism.iconicinfosec.com">ISO/IEC 27001:2022</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Contact Info</h4>
                 <ul>
-                    <li>📞 +95 9 882 211 069</li>
-                    <li>✉ iconicinfosec@gmail.com</li>
-                    <li>🔗 linkedin.com/in/zayarmaungmaung</li>
+                    <li>📞 <a href="tel:+959882211069">+95 9 882 211 069</a></li>
+                    <li>✉ <a href="mailto:iconicinfosec@gmail.com">iconicinfosec@gmail.com</a></li>
+                    <li>🔗 <a href="https://linkedin.com/in/zayarmaungmaung">LinkedIn Profile</a></li>
                     <li>📍 Yangon, Myanmar</li>
                 </ul>
             </div>
@@ -1020,22 +1525,6 @@
 
     <!-- JavaScript -->
     <script>
-        // Disable right-click
-        document.addEventListener('contextmenu', event => event.preventDefault());
-        
-        // Disable keyboard shortcuts for dev tools
-        document.onkeydown = function(e) {
-            if (e.keyCode === 123) { // F12
-                return false;
-            }
-            if (e.ctrlKey && e.shiftKey && (e.keyCode === 'I'.charCodeAt(0) || e.keyCode === 'J'.charCodeAt(0) || e.keyCode === 'C'.charCodeAt(0))) {
-                return false;
-            }
-            if (e.ctrlKey && (e.keyCode === 'U'.charCodeAt(0) || e.keyCode === 'u'.charCodeAt(0))) {
-                return false;
-            }
-        };
-
         // Smooth scroll for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -1086,13 +1575,9 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.course-card, .why-card, .stat-item').forEach(el => {
+        document.querySelectorAll('.course-card, .why-card, .stat-item, .pathway-item, .cert-item').forEach(el => {
             observer.observe(el);
         });
-
-        // Disable copy
-        document.addEventListener('selectstart', e => e.preventDefault());
-        document.addEventListener('dragstart', e => e.preventDefault());
     </script>
 </body>
 </html>
