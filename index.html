@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iconic Infosec Training - CyberSecurity Certification & Framework</title>
     <meta name="description" content="Iconic Infosec provides cybersecurity training, certification guidance, and networking education for professionals and learners. Learn from industry experts with 15+ years experience.">
-    <meta name="keywords" content="cybersecurity training, networking fundamentals, ISC2 CC, CCNP, CCNA, ISO 27001, Myanmar">
+    <meta name="keywords" content="cybersecurity training, information security, networking fundamentals, ISC2 CC, CCNP Enterprise, ISO 27001, Myanmar">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Iconic Infosec Training">
     <link rel="canonical" href="https://iconicinfosec.com/">
@@ -17,7 +17,7 @@
     <meta property="og:description" content="Master cybersecurity and networking with expert-led training programs. Industry-recognized certifications with hands-on practical experience.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://iconicinfosec.com/">
-    <meta property="og:image" content="https://iconicinfosec.com/logo/Logo.png">
+    <meta property="og:image" content="https://icon.iconicinfosec.com/logo/Logo.png">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,17 +31,18 @@
       "@type": "Organization",
       "name": "Iconic Infosec Training",
       "url": "https://iconicinfosec.com",
-      "logo": "https://iconicinfosec.com/logo/Logo.png",
+      "logo": "https://icon.iconicinfosec.com/logo/Logo.png",
       "description": "Cybersecurity training and certification guidance",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Yangon",
         "addressCountry": "MM"
       },
-      "telephone": "+95988221106",
-      "email": "iconicinfosec@gmail.com",
+      "telephone": "+959882211069",
+      "email": "iconicinfosecedu@gmail.com",
       "sameAs": [
-        "https://linkedin.com/in/zayarmaungmaung"
+        "https://linkedin.com/in/zayarmaungmaung",
+        "https://www.facebook.com/profile.php?id=61596332881363"
       ]
     }
     </script>
@@ -60,6 +61,50 @@
             --red: #ef4444;
             --purple: #8b5cf6;
             --cyan: #06b6d4;
+        }
+
+        ::selection { background: var(--cyan); color: #fff; }
+
+        body {
+            background:
+                radial-gradient(circle at 8% 4%, rgba(6, 182, 212, 0.10), transparent 28rem),
+                radial-gradient(circle at 92% 38%, rgba(139, 92, 246, 0.08), transparent 30rem),
+                #f0f3f8;
+        }
+
+        a:focus-visible, button:focus-visible {
+            outline: 3px solid #fbbf24;
+            outline-offset: 4px;
+        }
+
+        .header {
+            background: linear-gradient(120deg, #061b32 0%, var(--blue-dark) 45%, var(--blue) 100%);
+        }
+
+        .hero {
+            background:
+                radial-gradient(circle at 15% 20%, rgba(255,255,255,0.16), transparent 20rem),
+                radial-gradient(circle at 85% 10%, rgba(6,182,212,0.28), transparent 24rem),
+                linear-gradient(120deg, #061b32 0%, var(--blue-dark) 48%, var(--blue) 100%);
+        }
+
+        .hero h2 { text-shadow: 0 10px 30px rgba(0,0,0,0.20); }
+
+        .course-card, .about-section, .pathway-section, .why-card {
+            border: 1px solid rgba(219, 227, 236, 0.8);
+        }
+
+        .course-card::before {
+            content: '';
+            display: block;
+            height: 4px;
+            background: linear-gradient(90deg, var(--blue), var(--cyan), var(--purple));
+        }
+
+        .course-card:hover { border-color: rgba(6, 182, 212, 0.45); }
+
+        .section-header h2, .pathway-header h3 {
+            text-wrap: balance;
         }
 
         * {
@@ -853,43 +898,6 @@
             line-height: 1.6;
         }
 
-        /* ============ TECHNOLOGIES SECTION ============ */
-        .tech-section {
-            margin-top: 80px;
-            background: #fff;
-            border-radius: 20px;
-            padding: 70px 40px;
-            box-shadow: 0 8px 32px rgba(23, 32, 51, 0.08);
-        }
-
-        .tech-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 18px;
-            margin-top: 40px;
-        }
-
-        .tech-item {
-            background: linear-gradient(135deg, var(--pale) 0%, rgba(6, 182, 212, 0.05) 100%);
-            padding: 16px 28px;
-            border-radius: 12px;
-            font-weight: 600;
-            color: var(--ink);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.3s ease;
-            border: 1px solid var(--line);
-        }
-
-        .tech-item:hover {
-            background: linear-gradient(135deg, var(--blue), var(--cyan));
-            color: #fff;
-            transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(11, 92, 171, 0.2);
-        }
-
         /* ============ CTA SECTION ============ */
         .cta-section {
             background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%);
@@ -1061,7 +1069,7 @@
                 gap: 40px;
             }
 
-            .about-section, .tech-section {
+            .about-section {
                 padding: 50px 25px;
             }
 
@@ -1161,7 +1169,7 @@
     <header class="header">
         <div class="header-container">
             <div class="logo-section">
-                <img src="logo/Logo.png" alt="Iconic Infosec Logo" class="logo">
+                <img src="https://icon.iconicinfosec.com/logo/Logo.png" alt="Iconic Infosec Logo" class="logo">
                 <div class="logo-text">
                     <h1>Iconic Infosec</h1>
                     <span>Training & Consulting</span>
@@ -1321,39 +1329,39 @@
                     </div>
                 </div>
 
-                <!-- CCNA Security -->
+                <!-- Information Security Zero to Hero -->
                 <div class="course-card">
                     <span class="course-badge cisco">Cisco</span>
                     <div class="course-header">
                         <div class="course-icon">🛡️</div>
-                        <h3>CCNA Security</h3>
+                        <h3>Information Security Zero to Hero</h3>
                     </div>
                     <div class="course-body">
-                        <p>Build a strong foundation in network security. Learn secure network architecture, cryptography, AAA, firewall technologies, and VPN implementation.</p>
+                        <p>Move from security fundamentals to practical defensive capability. Learn risk, threats, identity, network defense, incident response, and security operations through a structured hands-on journey.</p>
                         <div class="course-meta">
-                            <span>⏱️ 50 Hours</span>
-                            <span>👤 Intermediate</span>
-                            <span>🔐 Network Security</span>
+                            <span>⏱️ 60 Hours</span>
+                            <span>👤 Beginner</span>
+                            <span>🔐 Information Security</span>
                         </div>
                         <a href="https://ism.iconicinfosec.com" class="course-link">Learn Now →</a>
                     </div>
                 </div>
 
-                <!-- CCNP Enterprise -->
+                <!-- CCNP Enterprise Compound Course -->
                 <div class="course-card">
                     <span class="course-badge ccnp">CCNP</span>
                     <div class="course-header">
                         <div class="course-icon">🚀</div>
-                        <h3>CCNP Enterprise</h3>
+                        <h3>CCNP Enterprise Compound Course</h3>
                     </div>
                     <div class="course-body">
-                        <p>Advance your networking career with expert-led CCNP Enterprise training. Master routing, switching, and advanced network technologies with hands-on lab practice.</p>
+                        <p>One complete CCNP Enterprise pathway combining both core and advanced routing &amp; services preparation. Build exam-ready expertise across enterprise architecture, automation, routing, switching, troubleshooting, and network services.</p>
                         <div class="course-meta">
-                            <span>⏱️ 80 Hours</span>
+                            <span>⏱️ 160 Hours</span>
                             <span>👤 Advanced</span>
-                            <span>🌐 Enterprise</span>
+                            <span>🌐 ENCOR + ENARSI</span>
                         </div>
-                        <a href="https://ccnp.iconicinfosec.com" class="course-link">Learn Now →</a>
+                        <a href="https://ccnp.iconicinfosec.com" class="course-link">Explore Compound Course →</a>
                     </div>
                 </div>
 
@@ -1398,8 +1406,8 @@
                             <p>Incident Response, Threat Detection, SIEM</p>
                         </div>
                         <div class="skill-item">
-                            <h4>🛡️ Security Platforms</h4>
-                            <p>Trend Micro, Fortinet, Palo Alto</p>
+                            <h4>🛡️ Security Engineering</h4>
+                            <p>Defence-in-depth, hardening, controls</p>
                         </div>
                         <div class="skill-item">
                             <h4>🌐 Network Security</h4>
@@ -1445,30 +1453,13 @@
             </div>
         </section>
 
-        <!-- TECHNOLOGIES -->
-        <section class="tech-section">
-            <div class="section-header">
-                <h2>Technologies & Platforms</h2>
-                <p>Expertise across leading security and networking solutions</p>
-            </div>
-            <div class="tech-grid">
-                <div class="tech-item">🛡️ Trend Micro Vision One</div>
-                <div class="tech-item">🔍 Elastic SIEM</div>
-                <div class="tech-item">🏰 Fortinet (FortiGate, FortiAP)</div>
-                <div class="tech-item">🌐 Cisco Routing & Switching</div>
-                <div class="tech-item">🔐 VPN & Firewall</div>
-                <div class="tech-item">📊 Wireshark</div>
-            </div>
-        </section>
-
         <!-- CTA SECTION -->
         <section class="cta-section" id="contact">
             <div class="cta-content">
                 <h2>Ready to Advance Your Career?</h2>
                 <p>Join our training programs and gain the skills employers are looking for.</p>
                 <div class="hero-buttons">
-                    <a href="mailto:iconicinfosec@gmail.com" class="btn btn-secondary">📧 Email Us</a>
-                    <a href="tel:+959882211069" class="btn btn-secondary">📞 +95 9 882 211 069</a>
+                    <a href="tel:+959882211069" class="btn btn-secondary">📞 Call 09 88 22 11 069</a>
                 </div>
             </div>
         </section>
@@ -1481,9 +1472,8 @@
                 <h4>About Iconic Infosec</h4>
                 <p>Providing world-class CyberSecurity training resources and certification preparation materials for aspiring security professionals in Myanmar and beyond.</p>
                 <div class="social-links">
-                    <a href="https://linkedin.com/in/zayarmaungmaung" class="social-link" title="LinkedIn">in</a>
-                    <a href="#" class="social-link" title="Facebook">f</a>
-                    <a href="#" class="social-link" title="Twitter">t</a>
+                    <a href="https://linkedin.com/in/zayarmaungmaung" class="social-link" title="LinkedIn" target="_blank" rel="noopener">in</a>
+                    <a href="https://www.facebook.com/profile.php?id=61596332881363" class="social-link" title="Facebook" target="_blank" rel="noopener">f</a>
                 </div>
             </div>
             <div class="footer-section">
@@ -1492,16 +1482,16 @@
                     <li><a href="https://ism.iconicinfosec.com">Networking Fundamentals</a></li>
                     <li><a href="https://ism.iconicinfosec.com">Cisco Cybersecurity Essential</a></li>
                     <li><a href="https://ism.iconicinfosec.com">ISC² Certified in Cybersecurity</a></li>
-                    <li><a href="https://ism.iconicinfosec.com">CCNA Security</a></li>
-                    <li><a href="https://ccnp.iconicinfosec.com">CCNP Enterprise</a></li>
+                    <li><a href="https://ism.iconicinfosec.com">Information Security Zero to Hero</a></li>
+                    <li><a href="https://ccnp.iconicinfosec.com">CCNP Enterprise Compound Course</a></li>
                     <li><a href="https://ism.iconicinfosec.com">ISO/IEC 27001:2022</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Contact Info</h4>
                 <ul>
-                    <li>📞 <a href="tel:+959882211069">+95 9 882 211 069</a></li>
-                    <li>✉ <a href="mailto:iconicinfosec@gmail.com">iconicinfosec@gmail.com</a></li>
+                    <li>📞 <a href="tel:+959882211069">09 88 22 11 069</a></li>
+                    <li>✉ <a href="mailto:iconicinfosecedu@gmail.com">iconicinfosecedu@gmail.com</a></li>
                     <li>🔗 <a href="https://linkedin.com/in/zayarmaungmaung">LinkedIn Profile</a></li>
                     <li>📍 Yangon, Myanmar</li>
                 </ul>
@@ -1511,10 +1501,9 @@
                 <ul>
                     <li>ISO 27001:2022 Lead Auditor</li>
                     <li>ISC² Certified in Cybersecurity</li>
-                    <li>CCNP Enterprise</li>
-                    <li>CCNA Security</li>
+                    <li>CCNP Enterprise Compound Course</li>
+                    <li>Information Security Zero to Hero</li>
                     <li>Trend Micro Vision One Certified</li>
-                    <li>Fortinet NSE 2</li>
                 </ul>
             </div>
         </div>
